@@ -1,19 +1,15 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 
-const DashBoard = (props) => {
+const Home = (props) => {
     return (
         <>
-            <Header />
-
             <section className="main services">
                 <div className="container groupservices">
                     <div className="row servicesbox">
                         <div className="col-12 col-md-5 col-lg-4 hidden_m">
                             <div class="servicesimg">
-                                <img src={require('../../assets/images/ourservice/1.jpg')} alt="manicure pedicure" />
-                                <img className="servicesimg2" src={require('../../assets/images/ourservice/01.jpg')} alt="manicure pedicure" />
+                                <img src={require('../assets/images/ourservice/1.jpg')} alt="manicure pedicure" />
+                                <img className="servicesimg2" src={require('../assets/images/ourservice/01.jpg')} alt="manicure pedicure" />
                             </div>
                         </div>
 
@@ -94,9 +90,7 @@ const DashBoard = (props) => {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </>
     );
 }
-export default DashBoard;
+export default Home;

@@ -1,11 +1,14 @@
-// import './App.css';
 import './assets/css/style.css'
-import DashBoard from './components/common/DashBoard';
+import React from 'react';
+import Router from './routers';
 
-function App() {
+const App = () => {
   return (
-    <DashBoard />
+    <React.Suspense fallback={<div>Đang tải dữ liệu...</div>}>
+      <Router/>
+    </React.Suspense>
   );
 }
+
 
 export default App;
