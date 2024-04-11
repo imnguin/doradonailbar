@@ -2,7 +2,7 @@ import Home from "./Home";
 
 export const screens = [
     {
-        path : '/Home',
+        path : '/Home/:KeyAPI',
         component : Home
     },
 ]

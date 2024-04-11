@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+// import { useDispatch } from 'react-redux';
+import { HOSTNAME } from "../utils/constants/SystemVars";
+// import { _fetchData, _fetchData2 } from '../utils/CallAPI';
+import { useParams } from "react-router-dom";
+import { aa, fetchData } from "../utils/FuncRequest";
 
 const Home = (props) => {
+    // const dispatch = useDispatch();
+    const { KeyAPI } = useParams();
+
+    useEffect(() => {
+        aa()
+            .then(data => {
+                // Xử lý dữ liệu nhận được ở đây
+                console.log('Data received:', data);
+            })
+            .catch(error => {
+                // Xử lý lỗi nếu có
+                console.error('Error:', error);
+            });
+    }, []);
+
+    // const loadData = async (postData) => {
+    //     // setisLoadComplete(false);
+    //     // const response = await dispatch(_fetchData(HOSTNAME, 'v2/booking/services', postData, 'GET'));
+    //     const response = await _fetchData2(HOSTNAME, 'v2/booking/services', postData, 'GET');
+    //     console.log(response)
+    // }
+
     return (
         <>
             <section className="main services">
